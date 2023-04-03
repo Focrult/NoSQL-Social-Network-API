@@ -1,5 +1,5 @@
 //Import models
-
+const Thought = require('../models/Thought');
 
 //controller
 
