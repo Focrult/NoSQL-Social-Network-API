@@ -1,6 +1,6 @@
 // Import mongoose
-const { Schema, Types, model } = require('mongoose');
-//Don't use it in future but we will use moment for now
+const { Schema, model } = require('mongoose');
+
 const moment = require('moment');
 
 

@@ -6,6 +6,7 @@ module.exports = {
 
     getThought(req, res){
         Thought.find()
+        .populate('username')
         .then((thoughts) => res.json(thoughts))
         .catch((err) => res.status(500).json(err));
     },
@@ -13,6 +14,7 @@ module.exports = {
 
     getThoughtId(req, res){
         Thought.findOne({ _id: req.params.thoughtId})
+        .populate('username')
         .then((thought) =>
         !thought
         ? res.status(404).json({ message: 'No thought with that ID' })
@@ -25,9 +27,18 @@ module.exports = {
 
     createThought(req, res) {
         Thought.create(req.body)
-        .then(
-
+        .then((data) => {
+            return User.findOneAndUpdate(
+                {_id:req.body.username},
+                {$push: {thoughts: data._id}},
+                {new: true},
+            )
+        }).then((user) =>
+        !user
+        ? res.status(404).json({ message: 'error with id'})
+        : res.json({message: 'Success with thought creation!'})
         )
+        .catch((err) => res.status(500).json(err));
     },
 
 
