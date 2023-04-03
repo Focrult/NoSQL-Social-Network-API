@@ -1,10 +1,8 @@
 // import both models
-const User = require('User.js');
-const Thought = require('Thought.js');
-
-//Associations?
+const User = require('User');
+const Thought = require('Thought');
 
 
 
-module.exports = {User, Thought};
+module.exports = { User, Thought };
 //Export models
