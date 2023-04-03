@@ -9,6 +9,8 @@ module.exports = {
         .then((thoughts) => res.json(thoughts))
         .catch((err) => res.status(500).json(err));
     },
+
+
     getThoughtId(req, res){
         Thought.findOne({ _id: req.params.thoughtId})
         .then((thought) =>
@@ -18,16 +20,22 @@ module.exports = {
         )
         .catch((err) => res.status(500).json(err));
     },
+
+
+
     createThought(req, res) {
         Thought.create(req.body)
         .then(
 
         )
     },
+
+
+
     updateThought(req, res) {
         Thought.findOneAndUpdate(
-            {},
-            {},
+            {_id: req.params. thoughtId},
+            {$set: req.body},
             {},
 
         )
@@ -38,6 +46,7 @@ module.exports = {
         )
     },
 
+    
     deleteThought(req, res) {
         Thought.findOneAndDelete({_id: req.params.thoughtId})
         .then((thought) =>
