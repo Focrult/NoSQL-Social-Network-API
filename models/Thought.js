@@ -20,9 +20,9 @@ const thoughtSchema = new Schema({
         type: String,
         required: true,
     },
-    reactions: {[
-
-    ]}
+    reactions: [
+        reactionSchema
+    ],
 },
 {
     toJSON: {
@@ -33,6 +33,31 @@ const thoughtSchema = new Schema({
 }
   )
 
+  //Reaction 
+const reactionSchema = new Schema({ //JUST THE SCHEMA
+    reactionID: {
+    type: Schema.Types.ObjectID,
+    default: true,
+    },
+    reactionBody: {
+        type: String,
+        required: true,
+        maxlength: 280,
+    },
+    username: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+    type: Date,
+    immutable: true,
+    default: () => Date.now,
+
+    },
+
+
+
+})
 
 
 

@@ -17,14 +17,14 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        match: [], //would be cool to test some regex here
+       match: [/^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]+\.[a-z]{2,3}/], //would be cool to test some regex here
     },
     thoughts: [{
-
+    type: Schema.Types.ObjectId,
     ref: 'Thought',
     }],
     friends: [{
-
+    type: Schema.Types.ObjectId,
     ref: 'User',
     }],
 },
