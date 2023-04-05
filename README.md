@@ -19,9 +19,9 @@ With the approrpiate package name and versions already included inside the packa
 
 Furthermore the user will be required to complete the following instructions to use this application:
 
-* Step 1: Open Insomnia
-* Step 2: Run 'npm start' to launch the application
-* Step 3: Input the appropriate Get, Post, Put and Delete requests
+* Step 1: Open Insomnia,
+* Step 2: Run 'npm start' to launch the application,
+* Step 3: Input the appropriate Get, Post, Put and Delete routes,
 * Step 4: View the results
  
   ## Usage
