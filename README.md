@@ -6,7 +6,7 @@
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Walkthrough Video](#walkthrough video)
+  - [Walkthrough Video](#walkthrough)
   - [License](#license)
   - [Questions](#questions)
 
@@ -26,7 +26,7 @@ Furthermore the user will be required to complete the following instructions to 
   ## Usage
  This application enables a social media startup to have access to an API for their social network that takes full advantage of a NoSQL database. To ensure that the startups website can handle large amounts of unstructured data.
  
-  ## Walkthrough Video
+  ## Walkthrough
   https://drive.google.com/file/d/1KfZit3odOyASTJWsrnzvQDgn1-FvGJS0/viewLinks to an external site.
 
  ### In case if the link above is unavailable: 
