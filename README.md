@@ -19,16 +19,21 @@ With the approrpiate package name and versions already included inside the packa
 
 Furthermore the user will be required to complete the following instructions to use this application:
 
-Step 1: Open Insomnia
-Step 2: Run 'npm start' to launch the application
-Step 3: Input the appropriate Get, Post, Put and Delete requests
-Step 4: View the results
+* Step 1: Open Insomnia
+* Step 2: Run 'npm start' to launch the application
+* Step 3: Input the appropriate Get, Post, Put and Delete requests
+* Step 4: View the results
  
   ## Usage
  This application enables a social media startup to have access to an API for their social network that takes full advantage of a NoSQL database. To ensure that the startups website can handle large amounts of unstructured data.
  
-  ## Contribution
- N/A
+  ## Walkthrough Video
+  https://drive.google.com/file/d/1KfZit3odOyASTJWsrnzvQDgn1-FvGJS0/viewLinks to an external site.
+
+ ### In case if the link above is unavailable: 
+https://drive.google.com/file/d/1KfZit3odOyASTJWsrnzvQDgn1-FvGJS0/view?usp=sharingLinks to an external site.
+
+ 
  
   ## License
   This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
