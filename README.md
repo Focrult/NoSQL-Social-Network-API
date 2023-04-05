@@ -12,19 +12,24 @@
   - [Questions](#questions)
 
   ## Description
-
+Here is my NoSQL Social Network Application. This project enables users to share their thoughts, react to friends’ thoughts, and create a friend list! This project takes full use of the Express.js for its routing MongoDB for the database, as well as the Mongoose ODM. It is capable of handling large amounts of unstructured data.
 
   ## Installation
- 
+With the approrpiate package name and versions already included inside the package.json file, the user will perform an npm install in their terminal. This will install all relevant dependencies.
+
+Furthermore the user will be required to complete the following instructions to use this application:
+
+Step 1: Open Insomnia
+Step 2: Run 'npm start' to launch the application
+Step 3: Input the appropriate Get, Post, Put and Delete requests
+Step 4: View the results
  
   ## Usage
- 
+ This application enables a social media startup to have access to an API for their social network that takes full advantage of a NoSQL database. To ensure that the startups website can handle large amounts of unstructured data.
  
   ## Contribution
  N/A
  
-  ## Tests
-  
   ## License
   This project is licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.
   
