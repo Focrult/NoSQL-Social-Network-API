@@ -1,10 +1,35 @@
 // Import mongoose
-const { Schema, Types, model } = require('mongoose');
-//Don't use it in future but we will use moment for now
-const moment = require('moment');
+const { Schema, model, Types } = require('mongoose');
 
+  //Reaction Schema
+  const reactionSchema = new Schema({ //JUST THE SCHEMA
+    reactionId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId()
+    },
+    reactionText: {
+        type: String,
+        required: true,
+        maxlength: 280,
+    },
+    username: {
+        type: String,
+        required: true,
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        immutable: true,
+    },
+},
+{
+    toJSON: {
+        getters: true,
+    }
+}
+);
 
-// const schema
+//Thought Schema
 const thoughtSchema = new Schema({
     thoughtText: {
         type: String,
@@ -13,8 +38,9 @@ const thoughtSchema = new Schema({
         minlength: 1,
     },
     createdAt: {
-    type: Date,
-    default: Date.now,
+        type: Date,
+        default: Date.now,
+        immutable: true,
     },
     username: {
         type: String,
@@ -26,40 +52,17 @@ const thoughtSchema = new Schema({
 },
 {
     toJSON: {
-      getters: true,
-      virtuals: true,
+        getters: true,
+        virtuals: true,
     },
-     id: false,
+        id: false,
 }
-  )
+)
 
-  //Reaction 
-const reactionSchema = new Schema({ //JUST THE SCHEMA
-    reactionID: {
-    type: Schema.Types.ObjectID,
-    default: true,
-    },
-    reactionBody: {
-        type: String,
-        required: true,
-        maxlength: 280,
-    },
-    username: {
-        type: String,
-        required: true,
-    },
-    createdAt: {
-    type: Date,
-    immutable: true,
-    default: () => Date.now,
-
-    },
-
+thoughtSchema.virtual('reactionCount').get( function()  {
+    return this.reactions.length;
 })
 
-
-
 const Thought = model('Thought', thoughtSchema);
-//
 
 module.exports = Thought;
